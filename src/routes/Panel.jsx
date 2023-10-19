@@ -103,7 +103,7 @@ const Panel = () => {
         {
           isConnected ?
             <WrapItem alignItems='center' justifyContent='center' p={2}>
-              <Avatar size='2xl' name={user.info.Pushname} bg='gray.200' />
+              <Avatar size='2xl' name={user?.info?.Pushname} bg='gray.200' />
             </WrapItem>
             :
             <Flex justify='center' align='center'>
@@ -123,7 +123,7 @@ const Panel = () => {
                     objectFit='contain'
                     boxSize='200px'
                     maxW={{ base: '100%', sm: '200px' }}
-                    src={`${user.qr}`}
+                    src={`${user?.qr}`}
                     alt='Código QR  '
                   />
               }
