@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/montserrat": "^5.0.14",
     "chart.js": "^4.4.0",
     "formik": "^2.4.5",
     "framer-motion": "^10.13.0",
