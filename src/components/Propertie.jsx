@@ -21,7 +21,7 @@ const Propertie = ({ id, name, value, onIncrement, onDecrement }) => {
 
   return (
     <Flex w='full' gap={1} align='center' justify='space-between'>
-      <Text>{name}</Text>
+      <Text fontSize='sm'>{name}</Text>
       <NumberInput
         name={id}
         value={value}
