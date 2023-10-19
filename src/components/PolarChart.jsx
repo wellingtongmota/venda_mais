@@ -11,7 +11,7 @@ import {
   RadialLinearScale,
   ArcElement,
 } from 'chart.js';
-import { Chart } from 'react-chartjs-2';
+import { PolarArea } from 'react-chartjs-2';
 
 ChartJS.register(
   RadialLinearScale,
@@ -26,7 +26,7 @@ ChartJS.register(
 );
 
 function updateChart(chart) {
-  chart.update();
+  chart?.update();
 }
 
 const PolarChart = ({ data }) => {
@@ -46,16 +46,25 @@ const PolarChart = ({ data }) => {
         max: 5,
         ticks:
         {
-          stepSize: 1
+          stepSize: 1,
+          color: '#000',
+        },
+        grid: {
+          color: '#9DB2BF'
+        }
+      },
+    },
+    plugins: {
+      legend: {
+        // display: false
+        labels: {
+          color: '#fff'
         }
       }
-    },
-    colors: {
-      forceOverride: true
     }
   }
 
-  return <Chart ref={chartRef} type='polarArea' options={options} data={data} style={{ maxWidth: '95%' }} />;
+  return <PolarArea ref={chartRef} options={options} data={data} style={{ maxWidth: '95%' }} />;
 }
 
 export default PolarChart

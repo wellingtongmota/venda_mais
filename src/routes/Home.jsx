@@ -18,9 +18,6 @@ const Home = () => {
 
   const user = {
     labels: properties.map(data => data.propertie),
-    legend: {
-      display: false
-    },
     datasets: [{
       label: 'Nível',
       data: properties.map(data => data.value),
@@ -34,7 +31,7 @@ const Home = () => {
         'rgba(0, 0, 227, 0.5)',
       ],
       borderWidth: 1,
-
+      color: '#fff',
     }],
   };
 
@@ -94,7 +91,7 @@ const Home = () => {
           flex={1}
           p={2}
           gap={2}
-          bg='blackAlpha.500'
+          bg='blackAlpha.200'
           borderRadius='lg'
           color='white'
         >
@@ -124,7 +121,7 @@ const Home = () => {
 
           {/* Container Chart */}
           <Flex
-            border='1px solid #D8D9DA'
+            border='1px solid #9DB2BF'
             borderRadius='lg'
             minH='330px'
             flex={1}
