@@ -133,7 +133,7 @@ const SubscribeForm = ({ properties }) => {
             borderRadius='none'
             rightIcon={<BsWhatsapp />}
           >
-            Receba no WhatsApp
+            Receber no WhatsApp
           </Button>
         </Flex>
       )}
