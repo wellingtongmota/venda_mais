@@ -1,10 +1,10 @@
-import { AspectRatio, Flex } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import { Logo } from '../components/home/Logo'
-import Banner from '../components/home/Banner'
+import { AspectRatio, Flex } from '@chakra-ui/react'
 import { userData } from '../utils/Data.js'
+import { Logo } from '../components/home/Logo'
 import Propertie from '../components/Propertie'
 import PolarChart from '../components/PolarChart'
+import Banner from '../components/home/Banner'
 import Banner3 from '../components/home/Banner3'
 import Banner4 from '../components/home/Banner4'
 
@@ -87,8 +87,10 @@ const Home = () => {
         {/* Container Chart e Propertie */}
         <Flex
           w='2xl'
-          flexDirection={['column', 'column', 'row']}
-          flex={1}
+          flexDirection={['row']}
+          flexWrap='wrap'
+          flexBasis={600}
+          flexGrow={1}
           p={2}
           gap={2}
           bg='blackAlpha.200'
@@ -98,12 +100,12 @@ const Home = () => {
 
           {/* Container Propriedades */}
           <Flex
-            flexDirection={['column', 'row', 'column']}
-            flexWrap='wrap'
-            gap={[3, 2, 3]}
-            // px={2}
+            flexDirection={['column']}
+            flexGrow={1}
+            flexBasis={250}
+            gap={3}
             align='center'
-            justify={['flex-start', 'space-around', 'center']}
+            justify={['center']}
           >
             {
               properties.map((item, index) => (
@@ -123,8 +125,8 @@ const Home = () => {
           <Flex
             border='1px solid #9DB2BF'
             borderRadius='lg'
-            minH='330px'
-            flex={1}
+            flexGrow={1}
+            flexBasis={350}
             justify='center'
             align='center'
           >
@@ -133,7 +135,7 @@ const Home = () => {
         </Flex>
 
         {/* Container Video */}
-        <Flex flexBasis={300}>
+        <Flex flexBasis={300} justify='center'>
           <AspectRatio w='full' maxW='300px' ratio={9 / 16} borderRadius='3xl' overflow='hidden'>
             <iframe
               title='Davis'
