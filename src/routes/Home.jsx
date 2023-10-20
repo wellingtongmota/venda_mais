@@ -115,6 +115,7 @@ const Home = () => {
             <Flex
               flexDirection='column'
               align='center'
+              gap={2} 
             >
               {
                 properties.map((item, index) => (

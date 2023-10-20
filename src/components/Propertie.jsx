@@ -25,7 +25,7 @@ const Propertie = ({ id, name, value, onIncrement, onDecrement }) => {
       <NumberInput
         name={id}
         value={value}
-        maxW='16'
+        maxW='20'
         size='md'
         max={10}
         min={0}
