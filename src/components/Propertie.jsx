@@ -21,12 +21,12 @@ const Propertie = ({ id, name, value, onIncrement, onDecrement }) => {
 
   return (
     <Flex w='full' gap={2} align='center' justify='space-between'>
-      <Text fontSize='sm'>{name}</Text>
+      <Text fontSize={['md', 'sm', 'sm']}>{name}</Text>
       <NumberInput
         name={id}
         value={value}
         maxW='20'
-        size='md'
+        size={['lg', 'lg', 'md']}
         max={10}
         min={0}
         focusBorderColor='gray.200'

@@ -116,6 +116,8 @@ const Home = () => {
               flexDirection='column'
               align='center'
               gap={2} 
+              w='full'
+              justify='space-between'
             >
               {
                 properties.map((item, index) => (
