@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AspectRatio, Flex } from '@chakra-ui/react'
+import { AspectRatio, Flex, Text } from '@chakra-ui/react'
 import { userData } from '../utils/Data.js'
 import { Logo } from '../components/home/Logo'
 import Propertie from '../components/Propertie'
@@ -103,10 +103,17 @@ const Home = () => {
             flexDirection={['column']}
             flexGrow={1}
             flexBasis={250}
-            gap={3}
+            gap={2}
             align='center'
-            justify={['center']}
+            justify={['space-evenly']}
+            // border='1px solid pink'
           >
+            <Text fontSize='2xl' fontWeight='bold'>Você pratica?</Text>
+
+            <Flex
+              flexDirection='column'
+              align='center'
+            >
             {
               properties.map((item, index) => (
                 <Propertie
@@ -119,6 +126,7 @@ const Home = () => {
                 />
               ))
             }
+            </Flex>
           </Flex>
 
           {/* Container Chart */}
