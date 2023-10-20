@@ -20,12 +20,12 @@ const Banner3 = () => {
           color='white'
           fontWeight='bold'
           textTransform='uppercase'
-          fontSize={['xl', '2xl', '3xl']}
+          fontSize={['xl', '2xl']}
           textAlign='center'
         // letterSpacing={-1}
         // border='1px solid red'
         >
-          Clique aqui e receba o resultado do seu gráfico no WhastApp
+          Clique no botão abaixo e receba grátis a análise do seu gráfico
         </Text>
       </Flex>
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AspectRatio, Flex, Text } from '@chakra-ui/react'
+import { AspectRatio, Button, Divider, Flex, Text } from '@chakra-ui/react'
 import { userData } from '../utils/Data.js'
 import { Logo } from '../components/home/Logo'
 import Propertie from '../components/Propertie'
@@ -83,7 +83,7 @@ const Home = () => {
         flexWrap='wrap'
         justify='center'
         align='stretch'
-        // border='1px solid pink'
+      // border='1px solid pink'
       >
         {/* Container Chart e Propertie */}
         <Flex
@@ -108,26 +108,26 @@ const Home = () => {
             gap={2}
             align='center'
             justify={['space-evenly']}
-            // border='1px solid pink'
+          // border='1px solid pink'
           >
-            <Text fontSize='2xl' fontWeight='bold'>Você pratica?</Text>
+            <Text fontSize='2xl' fontWeight='bold' textAlign='center'>Você pratica com <br /> seus Clientes?</Text>
 
             <Flex
               flexDirection='column'
               align='center'
             >
-            {
-              properties.map((item, index) => (
-                <Propertie
-                  key={index}
-                  id={item.id}
-                  name={item.propertie}
-                  value={item.value}
-                  onIncrement={handleIncrement}
-                  onDecrement={handleDecrement}
-                />
-              ))
-            }
+              {
+                properties.map((item, index) => (
+                  <Propertie
+                    key={index}
+                    id={item.id}
+                    name={item.propertie}
+                    value={item.value}
+                    onIncrement={handleIncrement}
+                    onDecrement={handleDecrement}
+                  />
+                ))
+              }
             </Flex>
           </Flex>
 
@@ -135,6 +135,7 @@ const Home = () => {
           <Flex
             border='1px solid #9DB2BF'
             borderRadius='lg'
+            minH={350}
             flexGrow={1}
             flexBasis={350}
             justify='center'
@@ -145,7 +146,7 @@ const Home = () => {
         </Flex>
 
         {/* Container Video */}
-        <Flex 
+        <Flex
           flexBasis={300}
           order={[3, 3, 2]}
           justify='center'
@@ -160,13 +161,34 @@ const Home = () => {
         </Flex>
 
         <Flex order={[2, 2, 3]}>
-        <Banner3 />
+          <Banner3 />
         </Flex>
       </Flex>
 
       {/* <Banner3 /> */}
 
-      <Banner4/>
+      <Banner4 />
+
+      <Divider maxW='5xl' />
+
+      <Flex w='full' maxW='5xl' justify='center' px={2} py={6}>
+        <Button
+          size={['md', 'lg']}
+          maxW='lg'
+          flexGrow={1}
+          flexBasis={250}
+          // type='submit'
+          // isLoading={isSubmitting}
+          // loadingText='Enviando'
+          colorScheme='whatsapp'
+          textTransform='uppercase'
+          borderRadius='none'
+        // rightIcon={<BsWhatsapp />}
+        >
+          Comprar agora
+        </Button>
+      </Flex>
+
     </Flex >
   )
 }
