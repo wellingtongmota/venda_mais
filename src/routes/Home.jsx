@@ -72,7 +72,7 @@ const Home = () => {
       <Logo />
       <Banner />
 
-      {/* Container Video e chart */}
+      {/* Container Chart, Video e Form */}
       <Flex
         mt={3}
         mb={6}
@@ -83,6 +83,7 @@ const Home = () => {
         flexWrap='wrap'
         justify='center'
         align='stretch'
+        // border='1px solid pink'
       >
         {/* Container Chart e Propertie */}
         <Flex
@@ -91,6 +92,7 @@ const Home = () => {
           flexWrap='wrap'
           flexBasis={600}
           flexGrow={1}
+          order={[1, 1, 1]}
           p={2}
           gap={2}
           bg='blackAlpha.200'
@@ -143,7 +145,11 @@ const Home = () => {
         </Flex>
 
         {/* Container Video */}
-        <Flex flexBasis={300} justify='center'>
+        <Flex 
+          flexBasis={300}
+          order={[3, 3, 2]}
+          justify='center'
+        >
           <AspectRatio w='full' maxW='300px' ratio={9 / 16} borderRadius='3xl' overflow='hidden'>
             <iframe
               title='Davis'
@@ -152,9 +158,13 @@ const Home = () => {
             />
           </AspectRatio>
         </Flex>
+
+        <Flex order={[2, 2, 3]}>
+        <Banner3 />
+        </Flex>
       </Flex>
 
-      <Banner3 />
+      {/* <Banner3 /> */}
 
       <Banner4/>
     </Flex >
