@@ -25,14 +25,14 @@ const Propertie = ({ id, name, value, onIncrement, onDecrement }) => {
       <NumberInput
         name={id}
         value={value}
-        maxW='20'
-        size={['lg', 'lg', 'md']}
+        maxW={['20', '16']}
+        size={['lg', 'md', 'sm']}
         max={10}
         min={0}
         focusBorderColor='gray.200'
       >
         <NumberInputField />
-        <NumberInputStepper bg='blackAlpha.600'>
+        <NumberInputStepper bg='blackAlpha.600' >
           <NumberIncrementStepper color='gray.300' onClick={handleIncrement} />
           <NumberDecrementStepper color='gray.300' onClick={handleDecrement} />
         </NumberInputStepper>
