@@ -39,6 +39,9 @@ const PolarChart = ({ data }) => {
   }, []);
 
   const options = {
+    layout: {
+      // padding: 0
+    },
     scales: {
       r:
       {
@@ -48,6 +51,11 @@ const PolarChart = ({ data }) => {
         {
           stepSize: 1,
           color: '#000',
+          // fundos dos números 1, 2, 3, 4 e 5
+          // backdropPadding: {
+          //   x: 5,
+          //   y: 4
+          // }
         },
         grid: {
           color: '#9DB2BF'
@@ -56,9 +64,13 @@ const PolarChart = ({ data }) => {
     },
     plugins: {
       legend: {
-        // display: false
+        // display: false,
+        // align: 'start',
+        // justify: 'top',
+        // position: 'bottom',
+        // fullSize: true,
         labels: {
-          color: '#fff'
+          color: '#fff',
         }
       }
     }
