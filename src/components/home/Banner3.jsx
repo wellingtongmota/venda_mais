@@ -29,7 +29,7 @@ const Banner3 = () => {
         </Text>
       </Flex>
 
-      <Flex maxW='6xl' w='full'>
+      <Flex w='full'>
         <SubscribeForm />
       </Flex>
     </Flex>

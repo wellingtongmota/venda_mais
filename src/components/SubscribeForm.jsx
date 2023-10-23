@@ -98,7 +98,6 @@ const SubscribeForm = ({ properties }) => {
         <Flex
           as={Form}
           gap={3}
-          p={2}
           flexWrap='wrap'
           flexDirection={['row']}
           w='full'
