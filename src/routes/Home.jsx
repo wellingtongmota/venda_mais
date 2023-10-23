@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { AspectRatio, Button, Divider, Flex, Text } from '@chakra-ui/react'
 import { userData } from '../utils/Data.js'
-import { Logo } from '../components/home/Logo'
 import Propertie from '../components/Propertie'
 import PolarChart from '../components/PolarChart'
 import Banner from '../components/home/Banner'
@@ -81,7 +80,7 @@ const Home = () => {
           backgroundSize: 'cover'
         }}
       >
-        <Logo />
+        {/* <Logo /> */}
 
         <Container>
           <Banner />
