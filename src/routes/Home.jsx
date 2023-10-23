@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { Container } from '../components/Container.jsx'
+import { UserContext } from '../contexts/UserContext.jsx'
 import { AspectRatio, Button, Divider, Flex, Text } from '@chakra-ui/react'
-import { userData } from '../utils/Data.js'
+import LoadingPage from '../components/LoadingPage.jsx'
+import { Navbar } from '../components/Navbar.jsx'
 import Propertie from '../components/Propertie'
 import PolarChart from '../components/PolarChart'
 import Banner from '../components/home/Banner'
 import Banner3 from '../components/home/Banner3'
 import Banner4 from '../components/home/Banner4'
-import LoadingPage from '../components/LoadingPage.jsx'
-import { Container } from '../components/Container.jsx'
-import { Navbar } from '../components/Navbar.jsx'
 
 const Home = () => {
 
-  const [properties, setProperties] = useState([{}]);
   const [isLoading, setIsLoading] = useState(false);
+  const { user, properties, handleIncrement, handleDecrement } = useContext(UserContext)
 
   useEffect(() => {
-    setProperties(userData)
     setIsLoading(true)
 
     setTimeout(() => {
@@ -24,44 +23,6 @@ const Home = () => {
     }, 100)
   }, [])
 
-  const user = {
-    labels: properties.map(data => data.propertie),
-    datasets: [{
-      label: 'Nível',
-      data: properties.map(data => data.value),
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.5)',
-        'rgba(255, 206, 86, 0.5)',
-        'rgba(75, 192, 192, 0.5)',
-        'rgba(153, 102, 255, 0.5)',
-        'rgba(175, 175, 175, 0.5)',
-        'rgba(0, 0, 227, 0.5)',
-      ],
-      borderWidth: 1,
-      color: '#fff',
-    }],
-  };
-
-  const handleIncrement = (id) => {
-    setProperties(properties.map(item => {
-      if (item.id === id) {
-        return { ...item, value: item.value < 5 ? item.value + 1 : item.value }
-      } else {
-        return item
-      }
-    }))
-  }
-
-  const handleDecrement = (id) => {
-    setProperties(properties.map(item => {
-      if (item.id === id) {
-        return { ...item, value: item.value > 0 ? item.value - 1 : item.value }
-      } else {
-        return item
-      }
-    }))
-  }
 
   return (
     isLoading ?
