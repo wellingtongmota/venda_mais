@@ -8,6 +8,7 @@ import Banner3 from '../components/home/Banner3'
 import Banner4 from '../components/home/Banner4'
 import LoadingPage from '../components/LoadingPage.jsx'
 import { Container } from '../components/Container.jsx'
+import { Navbar } from '../components/Navbar.jsx'
 
 const Home = () => {
 
@@ -80,7 +81,7 @@ const Home = () => {
           backgroundSize: 'cover'
         }}
       >
-        {/* <Logo /> */}
+        <Navbar />
 
         <Container>
           <Banner />
