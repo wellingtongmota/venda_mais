@@ -1,7 +1,7 @@
 import { Flex, Heading } from '@chakra-ui/react'
 import React from 'react'
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <Flex
       px={3}
@@ -15,3 +15,5 @@ export const Navbar = () => {
     </Flex>
   )
 }
+
+export default Navbar

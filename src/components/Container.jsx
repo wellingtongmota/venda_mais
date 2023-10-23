@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex } from '@chakra-ui/react'
 
-export const Container = ({ children }) => {
+const Container = ({ children }) => {
   return (
     <Flex
       flexDirection='column'
@@ -13,3 +13,5 @@ export const Container = ({ children }) => {
     </Flex>
   )
 }
+
+export default Container

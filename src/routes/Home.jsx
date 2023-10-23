@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Container } from '../components/Container.jsx'
-import { UserContext } from '../contexts/UserContext.jsx'
-import { AspectRatio, Button, Divider, Flex, Text } from '@chakra-ui/react'
+import Container  from '../components/Container.jsx'
 import LoadingPage from '../components/LoadingPage.jsx'
-import { Navbar } from '../components/Navbar.jsx'
+import Navbar from '../components/Navbar.jsx'
 import Propertie from '../components/Propertie'
 import PolarChart from '../components/PolarChart'
 import Banner from '../components/home/Banner'
 import Banner3 from '../components/home/Banner3'
 import Banner4 from '../components/home/Banner4'
+import { UserContext } from '../contexts/UserContext.jsx'
+import { AspectRatio, Button, Divider, Flex, Text } from '@chakra-ui/react'
 
 const Home = () => {
 
@@ -20,7 +20,7 @@ const Home = () => {
 
     setTimeout(() => {
       setIsLoading(false)
-    }, 100)
+    }, 1000)
   }, [])
 
 
@@ -140,7 +140,7 @@ const Home = () => {
 
           <Banner4 />
 
-          <Divider maxW='5xl' />
+          <Divider />
 
           <Flex w='full' maxW='5xl' justify='center' px={2} py={6}>
             <Button
