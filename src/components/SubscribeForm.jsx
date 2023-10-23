@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../contexts/UserContext';
+import SubscribeInput from './SubscribeInput';
+import { resultUser } from '../utils/ResultUser';
+import { Form, Formik } from 'formik'
+import * as Yup from 'yup'
 import { Button, Flex, useToast } from '@chakra-ui/react'
 import { LuPhone, LuUser } from "react-icons/lu";
 import { BsWhatsapp } from "react-icons/bs";
-import { Form, Formik } from 'formik'
-import * as Yup from 'yup'
-import { resultUser } from '../utils/ResultUser';
-import SubscribeInput from './SubscribeInput';
 
-const SubscribeForm = ({ properties }) => {
+const SubscribeForm = () => {
+
+  const { properties } = useContext(UserContext)
 
   const toast = useToast()
 
