@@ -8,6 +8,7 @@ import Banner from '../components/home/Banner'
 import Banner3 from '../components/home/Banner3'
 import Banner4 from '../components/home/Banner4'
 import LoadingPage from '../components/LoadingPage.jsx'
+import { Container } from '../components/Container.jsx'
 
 const Home = () => {
 
@@ -20,7 +21,7 @@ const Home = () => {
 
     setTimeout(() => {
       setIsLoading(false)
-    }, 1700)
+    }, 100)
   }, [])
 
   const user = {
@@ -67,20 +68,22 @@ const Home = () => {
       <LoadingPage />
       :
 
-        <Flex
-          // bgGradient='linear(to-r, #022737, teal.900, #022737)'
-          bgImage='/background.png'
-          flexDirection='column'
-          align='center'
-          overflowY='auto'
-          style={{
-            width: '100%',
-            height: '100dvh',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }}
-        >
-          <Logo />
+      <Flex
+        // bgGradient='linear(to-r, #022737, teal.900, #022737)'
+        bgImage='/background.png'
+        flexDirection='column'
+        align='center'
+        overflowY='auto'
+        style={{
+          width: '100%',
+          height: '100dvh',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover'
+        }}
+      >
+        <Logo />
+
+        <Container>
           <Banner />
 
           {/* Container Chart, Video e Form */}
@@ -88,13 +91,11 @@ const Home = () => {
             mt={3}
             mb={6}
             gap={[2, 4]}
-            px={2}
-            maxW='5xl'
             w='full'
             flexWrap='wrap'
             justify='center'
             align='stretch'
-          // border='1px solid pink'
+            // border='1px solid red'
           >
             {/* Container Chart e Propertie */}
             <Flex
@@ -110,7 +111,6 @@ const Home = () => {
               borderRadius='lg'
               color='white'
             >
-
               {/* Container Propriedades */}
               <Flex
                 flexDirection={['column']}
@@ -196,8 +196,9 @@ const Home = () => {
               Comprar agora
             </Button>
           </Flex>
+        </Container>
 
-        </Flex >
+      </Flex >
   )
 }
 

@@ -4,20 +4,15 @@ import React from 'react'
 const Banner = () => {
   return (
     <Flex
-      // px={[4, 2]}
       mt={4}
       flexDirection='column'
       w='full'
-      maxW='5xl'
-      px={2}
-      // border='1px solid red'
     >
       <Flex
         gap={4}
         flexGrow={1}
         align='center'
         justify='center'
-        // border='1px solid blue'
       >
         <Text
           color='white'

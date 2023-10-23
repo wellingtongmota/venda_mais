@@ -21,38 +21,24 @@ const Banner4 = () => {
 
   return (
     <Flex
-      maxW='5xl'
       w='full'
       flexDirection='column'
       align='center'
       gap={6}
-    // border='2px solid red'
+      color='white'
     >
       <Flex
         w='full'
-        flexDirection='row'
-        flexWrap='wrap'
+        justify='center'
         align='center'
-        justify='space-around'
-        gap={2}
-        p={2}
-        // border='2px solid blue'
       >
-
-        <Flex
-          flexGrow={1}
-          flexBasis={200}
-          justify='center'
-          // border='1px solid red'
-        >
-          <Image
-            boxSize={['full', '95%', '90%']}
-            objectFit='contain'
-            src='/bannerlargo2.png'
-            alt='Banner largo'
-            shadow='2xl'
-          />
-        </Flex>
+        <Image
+          boxSize={['full', '95%', '90%']}
+          objectFit='contain'
+          src='/bannerlargo2.png'
+          alt='Banner largo'
+          shadow='2xl'
+        />
       </Flex>
 
       <Flex
@@ -61,10 +47,8 @@ const Banner4 = () => {
         w='full'
         gap={3}
         pb={4}
-      // border='1px solid pink'
       >
         <Text
-          color='white'
           fontWeight='bold'
           textTransform='uppercase'
           fontSize={['2xl', '3xl', '4xl']}
@@ -75,14 +59,12 @@ const Banner4 = () => {
 
         <Flex
           flex={1}
-          color='white'
           w='full'
           gap={6}
           flexWrap='wrap'
-          flexDirection={['row']}
+          flexDirection='row'
           align='start'
           justify='space-around'
-        // border='1px solid red'
         >
           <TableContainer flexGrow={1}>
             <Table variant='unstyled' size='sm'>
