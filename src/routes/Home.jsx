@@ -95,7 +95,7 @@ const Home = () => {
             flexWrap='wrap'
             justify='center'
             align='stretch'
-            // border='1px solid red'
+          // border='1px solid red'
           >
             {/* Container Chart e Propertie */}
             <Flex
@@ -174,9 +174,7 @@ const Home = () => {
               </AspectRatio>
             </Flex>
 
-            <Flex order={[2, 2, 3]}>
-              <Banner3 />
-            </Flex>
+            <Banner3 order={[2, 2, 3]} />
           </Flex>
 
           <Banner4 />

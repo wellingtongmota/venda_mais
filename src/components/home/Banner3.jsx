@@ -2,7 +2,7 @@ import { Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 import SubscribeForm from '../SubscribeForm'
 
-const Banner3 = () => {
+const Banner3 = (props) => {
   return (
     <Flex
       w='full'
@@ -10,6 +10,7 @@ const Banner3 = () => {
       align='center'
       gap={2}
       pb={4}
+      {...props}
     >
       <Flex
         flexDirection='column'
