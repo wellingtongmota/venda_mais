@@ -58,7 +58,7 @@ const Home = () => {
             align='stretch'
           // border='1px solid red'
           >
-            {/* Container Chart e Propertie */}
+            {/* Container Chart and Properties */}
             <Flex
               w='2xl'
               flexDirection={['row']}
@@ -72,7 +72,7 @@ const Home = () => {
               borderRadius='lg'
               color='white'
             >
-              {/* Container Propriedades */}
+              {/* Container Properties */}
               <Flex
                 flexDirection={['column']}
                 flexGrow={1}
@@ -135,6 +135,7 @@ const Home = () => {
               </AspectRatio>
             </Flex>
 
+            {/* Container Form */}
             <Banner3 order={[2, 2, 3]} />
           </Flex>
 
